@@ -1,4 +1,4 @@
-import random
+import secrets
 
 
 def main():
@@ -6,7 +6,7 @@ def main():
 
     # Random rand =new Random();
     # the_number = rand.Next(1, 100);
-    the_number = random.randint(1, 100)
+    the_number = secrets.SystemRandom().randint(1, 100)
 
     count = 0
     while True:
