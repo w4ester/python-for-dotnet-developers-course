@@ -1,4 +1,5 @@
 from colorama import Fore
+import secrets
 
 
 def main():
@@ -19,13 +20,12 @@ def main():
 
 
 def sketchy_method(value: int):
-    import random
 
     if not value:
         raise ValueError(f"{value} is not valid.")
     elif value % 6 == 0:
         raise ArithmeticError()
-    elif random.randint(1, 10) == 3:
+    elif secrets.SystemRandom().randint(1, 10) == 3:
         raise BrokenPipeError("Bad network!")
 
     print("sketchy_method() actually worked!")
